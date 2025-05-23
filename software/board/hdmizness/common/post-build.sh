@@ -1,5 +1,9 @@
 #!/bin/bash
 
+set -x
+
+[[ "${TARGET_DIR}" == "" ]] && exit 0
+
 # Generate server ssh keys
 mkdir -p "${TARGET_DIR}/etc/ssh"
 for kind in dsa rsa ecdsa ed25519; do
@@ -8,3 +12,12 @@ for kind in dsa rsa ecdsa ed25519; do
         ssh-keygen -q -N "" -t $kind -f "$key"
     fi
 done
+
+# cleanup unneeded console fonts
+find "${TARGET_DIR}/usr/share/consolefonts" -type f | \
+	grep -v gr737b-9x16-medieval.psfu.gz | \
+	grep -v t.fnt.gz | \
+	xargs -d '\n' rm -f
+
+# remove zsh functions bloat
+find "${TARGET_DIR}/usr/share/zsh" -name functions -type d | xargs -d '\n' rm -rf

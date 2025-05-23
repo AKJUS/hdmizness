@@ -34,6 +34,8 @@ function motd_f1c200s() {
 }
 
 function motd() {
+	setfont /usr/share/consolefonts/gr737b-9x16-medieval.psfu.gz
+
 	if grep 1280x720 /proc/cmdline > /dev/null; then
 		motd_f1c200s
 	else
