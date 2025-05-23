@@ -18,7 +18,7 @@ function motd_f1c100s() {
 	pr_tty "\033[0;0H"
 	pr_tty "Welcome to ${bld}HDMIzness${rst}, a business card that runs Linux that runs ${red}DOOM${rst}."
 	pr_tty "\033[28;0H"
-	pr_tty "Keyboard controls: ${mgt}http://10.17.77.1:8080/kbd${rst}. "
+	pr_tty "Keyboard controls: ${mgt}http://10.17.77.1${rst}. "
 	pr_tty "SSH: ${grn}root:root@10.17.77.1${rst}."
 }
 
@@ -27,7 +27,7 @@ function motd_f1c200s() {
 	pr_tty "Welcome to ${bld}HDMIzness${rst}, a business card that runs Linux that runs ${red}DOOM${rst}."
 	pr_tty "\033[3;0H"
 	pr_tty 'The captive portal that opened on your computer will forward your inputs to DOOM, happy playing! '
-	pr_tty "If missing, visit ${mgt}http://10.17.77.1:8080/kbd${rst}."
+	pr_tty "If missing, visit ${mgt}http://10.17.77.1${rst}."
 	pr_tty '\033[44;0H'
 	pr_tty "You can also SSH right into the card with ${grn}ssh root@10.17.77.1${rst}, password "
 	pr_tty "root, and tinker to your heart's content."

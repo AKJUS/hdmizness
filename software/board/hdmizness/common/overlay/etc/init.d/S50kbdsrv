@@ -3,7 +3,7 @@
 case "$1" in
 	start)
 		printf "Starting kbdsrv: "
-		start-stop-daemon -S -b -x /usr/bin/kbdsrv
+		start-stop-daemon -S -b -x /usr/bin/kbdsrv -- --bind 0.0.0.0:80 --root /
 		[ $? = 0 ] && echo OK || echo FAIL
 		;;
 	stop)
