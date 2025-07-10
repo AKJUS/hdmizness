@@ -1,6 +1,9 @@
 # hdmizness
 
-A business card that runs Linux and that has an HDMI output.
+A business card that runs Linux and that has an HDMI output (and yes, it runs DOOM).
+
+Did I give you one? Congratulations! Head off to [usage](USAGE.md) if you want to read a bit before
+trying it out.
 
 ## Project layout
 
